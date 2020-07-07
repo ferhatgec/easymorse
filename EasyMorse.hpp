@@ -142,6 +142,9 @@ public:
 	        std::string sub;
 	        std::cout << "Type a word or morse code(using - and .): " << std::endl;
 	        std::getline(std::cin, input);
+	        if(input.length() == 0) {
+	        	return;
+	        } else {
 	        if(input[1]=='.' || input[1]=='-') {
 	            toMorse=false;
 	        }
@@ -174,7 +177,7 @@ public:
 	        std::cout << "Press q to quit." << std::endl;
 	        std::cin >> key;
 	        if(key=='q') {
-	            exit(EXIT_SUCCESS);
+	            return;
 	        } else {
 	       	
 	        }
@@ -182,7 +185,7 @@ public:
 	        std::cin.ignore();
 	        std::cout << std::endl;
 	    }
-	    
+	    }
 	}
 };
 
